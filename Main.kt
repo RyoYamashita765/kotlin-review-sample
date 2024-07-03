@@ -1,3 +1,7 @@
 fun main() {
-    val answer = 42
+    var answer = 42
+    while (answer > 0) {
+        println("Hello, World!")
+        answer--
+    }
 }
