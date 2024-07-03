@@ -3,5 +3,7 @@ fun main(args: Array<String>) {
     while (answer <= 42) {
         println("The answer is " + answer)
         answer++
+        answer++
+        answer++
     }
 }
