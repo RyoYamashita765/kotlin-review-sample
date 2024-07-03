@@ -3,7 +3,7 @@ fun main() {
     when (answer - 1) {
         41 -> {
             println("The answer is 42.")
-            println(answer)
+            println(answer + 1)
         }
         else -> println("The answer is not 42.")
     }
