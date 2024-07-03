@@ -3,8 +3,6 @@ fun main(args: Array<String>) {
         1 -> println("No arguments")
         else -> {
             println("Arguments:")
-            for (arg in args)
-                println(arg)
         }
     }
 }
