@@ -3,7 +3,5 @@ fun main(args: Array<String>) {
         println("Hello, Kotlin!");
     } else {
         println("Hello, " + args[0] + "!");
-        val answer = 40
-        println("The answer is not $answer")
     }
 }
