@@ -1,3 +1,5 @@
 fun main() {
-    var answer = 42
+    println("Hello World!")
+    print("Lorem ipsum dolor sit amet, ")
+    println("consectetur adipiscing elit.")
 }
