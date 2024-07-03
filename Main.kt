@@ -1,4 +1,4 @@
 fun main() {
-    println("Hello World!")
+    val answer = 42
     println("Hello new branch!")
 }
