@@ -3,9 +3,9 @@ fun main(args: Array<String>) {
 
     var answer = 0
     while (answer < 43) {
-        println("--------------------")
+        println("====================")
         println("answer: " + answer)
-        println("--------------------")
+        println("====================")
         answer++
     }
 }
