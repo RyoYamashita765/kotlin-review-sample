@@ -9,3 +9,7 @@ class Main {
 
 class Dummy {
 }
+
+class Cache {
+    val cache = mutableMapOf<String, String>()
+}
