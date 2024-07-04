@@ -6,17 +6,3 @@ class Main {
         }
     }
 }
-
-class Dummy {
-}
-
-class Cache {
-    val cache = mutableMapOf<String, String>()
-
-    fun get(key: String): String? {
-        return cache[key]
-    }
-}
-
-class Printer {
-}
