@@ -6,3 +6,6 @@ class Main {
         }
     }
 }
+
+class Dummy {
+}
