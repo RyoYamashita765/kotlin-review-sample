@@ -4,10 +4,8 @@ public class Main {
         fun main(args: Array<String>) {
             println("Hello, World!")
 
-            println("--------------------")
             val subClass = Sub();
 		    subClass.main(args);
-            println("--------------------")
         }
     }
 }
