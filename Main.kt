@@ -6,3 +6,7 @@ class Main {
         }
     }
 }
+
+interface Printer {
+    fun print()
+}
