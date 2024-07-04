@@ -2,7 +2,7 @@ class Main {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            println("Hello, World!")
+            println("Printer:")
             val printer = Printer();
         }
     }
@@ -10,7 +10,7 @@ class Main {
 
 class Printer {
     fun print() {
-        println("Hello, World!")
+        println("Hello, Kotlin World!")
         println("(from Printer)")
     }
 }
