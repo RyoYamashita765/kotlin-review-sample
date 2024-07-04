@@ -1,6 +1,6 @@
 class Main {
-    val HELLO = "HELLO"
-    val count = 0
+    val HELLO = "Hello, Kotlin!"
+    val count = 10
     val PI = 3.141592
 
     companion object {
