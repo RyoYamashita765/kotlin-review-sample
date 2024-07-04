@@ -13,3 +13,9 @@ class Dummy {
 class Cache {
     val cache = mutableMapOf<String, String>()
 }
+
+class Printer {
+    fun print() {
+        println("Hello, World!")
+    }
+}
