@@ -1,14 +1,11 @@
-class Main {
+public class Main {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            val printer = Printer();
-        }
-    }
-}
+            println("Hello, World!")
 
-class Printer {
-    fun print() {
-        println("Hello, Kotlin World!")
+            val sub = Sub();
+		    sub.main(args);
+        }
     }
 }
