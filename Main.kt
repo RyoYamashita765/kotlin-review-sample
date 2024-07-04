@@ -15,10 +15,18 @@ class Cache {
     fun set(key: String, value: String) {
         cache[key] = value
     }
+
+    fun get(key: String): String? {
+        return cache[key]
+    }
 }
 
 class Printer {
     fun print() {
         println("Hello, World!")
+    }
+
+    fun print(message: String) {
+        println(message)
     }
 }
