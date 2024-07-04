@@ -1,8 +1,8 @@
 public class Sub {
     fun main(args: Array<String>) {
-        println("Hello, Sub World!")
+        println("Arguments:")
         for (arg in args) {
-            println(arg)
+            println("  $arg")
         }
     }
 }

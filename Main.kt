@@ -5,8 +5,8 @@ public class Main {
             println("Hello, World!")
 
             println("--------------------")
-            val sub = Sub();
-		    sub.main(args);
+            val subClass = Sub();
+		    subClass.main(args);
             println("--------------------")
         }
     }
