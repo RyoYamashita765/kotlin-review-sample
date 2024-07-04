@@ -1,11 +1,11 @@
 fun main(args: Array<String>) {
     println("Hello World!")
 
-    when (args.size) {
+    when (args.size + 1) {
         0 -> {
             println("No arguments")
         }
-        1 -> {
+        2 -> {
             println("One argument")
         }
         else -> {
