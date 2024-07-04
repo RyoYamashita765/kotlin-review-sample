@@ -1,11 +1,11 @@
 fun main(args: Array<String>) {
     println("Hello World!")
 
-    println("printHello():")
+    print("printHello():")
     printHello()
 }
 
 fun printHello() {
-    println("Hello.")
+    print("Hello, ")
     println("Hello again.")
 }
