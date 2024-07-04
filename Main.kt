@@ -6,7 +6,3 @@ class Main {
         }
     }
 }
-
-interface Printer {
-    fun printMessage(message: String)
-}
