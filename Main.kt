@@ -12,6 +12,9 @@ class Dummy {
 
 class Cache {
     val cache = mutableMapOf<String, String>()
+    fun set(key: String, value: String) {
+        cache[key] = value
+    }
 }
 
 class Printer {
