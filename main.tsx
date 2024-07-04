@@ -1,9 +1,15 @@
 import React from 'react';
 
 const SampleForm = () => {
+    const [test, setText] = React.useState('');
+
     return (
         <form>
-            <input type="text" />
+            <input type="text" onChange = {
+                (e) => {
+                    setText(e.target.value);
+                }
+            } />
             <button>Submit</button>
         </form>
     );
