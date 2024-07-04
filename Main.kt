@@ -1,11 +1,11 @@
 fun main(args: Array<String>) {
     println("Arguments: ${args.joinToString()}")
-    println("Environment: ${System.getenv().map { (k, v) -> "$k=$v" }.joinToString(", ")}")
-    println("Properties: ${System.getProperties().map { (k, v) -> "$k=$v" }.joinToString(", ")}")
+    println("Environments: ${System.getenv().size}")
+    println("Properties: ${System.getProperties().size}")
 
     println("Hello World!")
 
     val name = "kotlin"
-    println("Hello $name!")
-    println("Hello ${name.uppercase()}!")
+    println("Hello, $name!")
+    println("Hello, ${name.uppercase()}!")
 }
