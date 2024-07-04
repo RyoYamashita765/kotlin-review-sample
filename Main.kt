@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-    println("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+    println("Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
 
 
 
@@ -7,5 +7,5 @@ fun main(args: Array<String>) {
 
 
 
-    println("Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+    println("Duis aute irure dolor in reprehenderit in voluptate ...")
 }
