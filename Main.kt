@@ -9,4 +9,6 @@ class Main {
 
 interface Printer {
     fun print()
+
+    fun printMessage(message: String)
 }
