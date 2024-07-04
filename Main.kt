@@ -7,11 +7,11 @@ fun main(args: Array<String>) {
         }
         2 -> {
             println("One argument")
-            println("Argument: ${args[0]}")
+            println("Argument: ${args[1]}")
         }
         else -> {
             println("More than one argument")
-            println("Arguments: ${args.joinToString()}")
+            println("Arguments: ${args.size}")
         }
     }
 }
