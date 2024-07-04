@@ -1,9 +1,8 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
-
-    printHello()
-}
-
-fun printHello() {
-    println("Hello again.")
+class Main {
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            println("Hello, World!")
+        }
+    }
 }
