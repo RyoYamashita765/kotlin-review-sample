@@ -11,4 +11,8 @@ interface Printer {
     fun print()
 
     fun printMessage(message: String)
+
+    fun printMessageWithPrefix(message: String, prefix: String) {
+        println("[$prefix] $message")
+    }
 }
