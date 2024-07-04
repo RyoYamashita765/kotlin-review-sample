@@ -22,10 +22,6 @@ class Cache {
 }
 
 class Printer {
-    fun print() {
-        println("Hello, World!")
-    }
-
     fun print(message: String) {
         println(message)
     }
