@@ -9,8 +9,4 @@ class Main {
 
 interface Printer {
     fun printMessage(message: String)
-
-    fun printMessageWithPrefix(message: String, prefix: String) {
-        println("[$prefix] $message")
-    }
 }
