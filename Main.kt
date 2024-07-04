@@ -6,3 +6,9 @@ class Main {
         }
     }
 }
+
+class Printer {
+    fun print() {
+        println("Hello, World!")
+    }
+}
