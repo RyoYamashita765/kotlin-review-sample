@@ -4,8 +4,10 @@ public class Main {
         fun main(args: Array<String>) {
             println("Hello, World!")
 
+            println("--------------------")
             val sub = Sub();
 		    sub.main(args);
+            println("--------------------")
         }
     }
 }
