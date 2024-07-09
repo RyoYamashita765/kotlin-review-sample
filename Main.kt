@@ -1,30 +1,17 @@
-open class Logger {
-    fun log(message: String) {
-        println("Logging: $message")
+fun processNames(names: List<String>): List<String> {
+    val processedNames = mutableListOf<String>()
+    for (name in names) {
+        val processed = name.replaceFirstChar { it.uppercase() }.trim()
+        processedNames.add(processed)
     }
-}
-
-class FileLogger : Logger() {
-    fun saveToFile(fileName: String) {
-        println("Saving to file: $fileName")
-    }
-}
-
-class NetworkLogger : Logger() {
-    fun sendToServer(url: String) {
-        println("Sending to server: $url")
-    }
+    return processedNames
 }
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        val fileLogger = FileLogger()
-        fileLogger.log("File log message")
-        fileLogger.saveToFile("log.txt")
-
-        val networkLogger = NetworkLogger()
-        networkLogger.log("Network log message")
-        networkLogger.sendToServer("http://example.com")
+        val names = listOf("john ", " alice", "bob  ", "  carol")
+        val result = processNames(names)
+        println(result)
     }
 }
