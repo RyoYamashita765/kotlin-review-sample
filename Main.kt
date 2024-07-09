@@ -1,15 +1,39 @@
-fun getDiscountPercentage(customer: Customer): Int {
-    if (customer.isPremium) {
-        if (customer.loyaltyYears > 5) {
-            return 20
-        } else {
-            return 15
+class UserService {
+    private val userRepository = UserRepository()
+    private val emailService = EmailService()
+
+    fun registerUser(username: String, email: String) {
+        if (userRepository.isEmailTaken(email)) {
+            throw IllegalArgumentException("Email is already registered")
         }
-    } else {
-        if (customer.purchaseCount > 10) {
-            return 10
-        } else {
-            return 5
-        }
+
+        val user = User(username, email)
+        userRepository.save(user)
+        emailService.sendWelcomeEmail(email)
+    }
+}
+
+class UserRepository {
+    fun isEmailTaken(email: String): Boolean {
+        val user = SampleDatabase.findUserByEmail(email)
+        return user != null
+    }
+
+    fun save(user: User) {
+        SampleDatabase.saveUser(user)
+    }
+}
+
+class EmailService {
+    fun sendWelcomeEmail(email: String) {
+        SampleClient.sendEmail(email, "Welcome to our service!")
+    }
+}
+
+object Main {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val userService = UserService()
+        userService.registerUser("johndoe", "john@example.com")
     }
 }
