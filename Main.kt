@@ -1,29 +1,19 @@
-import kotlinx.coroutines.runBlocking
-import java.time.LocalDateTime
-import kotlin.math.pow
-import java.util.*
-import kotlinx.coroutines.delay
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import kotlin.random.Random
-import java.io.File
-import android.widget.TextView
+class UserService(private val userRepository: UserRepository) {
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    fun getUserById(id: Long) = userRepository.findById(id)
 
-        val textView = findViewById<TextView>(R.id.textView)
-        val currentTime = LocalDateTime.now()
-        val randomNumber = Random.nextDouble().pow(2)
+    fun createUser(name: String, email: String) {
+        val user = User(name = name, email = email)
+        userRepository.save(user)
+    }
 
-        runBlocking {
-            delay(1000)
-            textView.text = "Current time: $currentTime\nRandom number: $randomNumber"
+    fun updateUserEmail(id: Long, newEmail: String) =
+        userRepository.findById(id)?.let { user ->
+            user.email = newEmail
+            userRepository.save(user)
         }
 
-        val file = File("example.txt")
-        file.writeText(UUID.randomUUID().toString())
-    }
+    fun deleteUser(id: Long) = userRepository.deleteById(id)
+
+    fun searchUsers(query: String) = userRepository.search(query)
 }
