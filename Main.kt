@@ -1,43 +1,29 @@
-fun processOrder(order: Order): OrderResult {
-    if (order.isValid()) {
-        if (order.hasInStockItems()) {
-            if (order.customerHasEnoughCredit()) {
-                // The logic for processing an order
-                val packingSlip = generatePackingSlip(order)
-                val invoice = generateInvoice(order)
-                sendConfirmationEmail(order.customer, packingSlip, invoice)
-                updateInventory(order.items)
-                chargeCustomer(order.customer, order.totalAmount)
-                return OrderResult.Success(packingSlip, invoice)
-            } else {
-                // Notification to the customer (credit card declined)
-                sendInsufficientCreditNotification(order.customer)
-                logFailedOrder(order, "Insufficient credit")
-                return OrderResult.Failure("Insufficient credit")
-            }
-        } else {
-            // When items are out of stock
-            val backorderItems = findBackorderItems(order.items)
-            createBackorder(order, backorderItems)
-            sendBackorderNotification(order.customer, backorderItems)
-            logFailedOrder(order, "Items out of stock")
-            return OrderResult.Failure("Items out of stock")
-        }
-    } else {
-        // Invalid order processing
-        logInvalidOrder(order)
-        sendInvalidOrderNotification(order.customer)
-        return OrderResult.Failure("Invalid order")
-    }
-}
+import kotlinx.coroutines.runBlocking
+import java.time.LocalDateTime
+import kotlin.math.pow
+import java.util.*
+import kotlinx.coroutines.delay
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import kotlin.random.Random
+import java.io.File
+import android.widget.TextView
 
-object Main {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val order = Order(
-            customer = Customer,
-            items = listOf(Item),
-            totalAmount = 1000,
-        )
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val textView = findViewById<TextView>(R.id.textView)
+        val currentTime = LocalDateTime.now()
+        val randomNumber = Random.nextDouble().pow(2)
+
+        runBlocking {
+            delay(1000)
+            textView.text = "Current time: $currentTime\nRandom number: $randomNumber"
+        }
+
+        val file = File("example.txt")
+        file.writeText(UUID.randomUUID().toString())
     }
 }
