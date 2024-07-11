@@ -19,5 +19,5 @@ class UserRepository {
 }
 
 class UserProfile {
-    var name: String = ""
+    var name: String? = null
 }
