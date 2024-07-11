@@ -4,7 +4,7 @@ public class Main {
 
     companion object {
         @JvmStatic
-        fun main() {
+        fun main(args: Array<String>) {
             val circleRadius = 5.0
             val circleArea = 3.141592 * circleRadius * circleRadius
             println("Circle area is $circleArea")
@@ -13,7 +13,11 @@ public class Main {
 }
 
 class UserRepository {
-    fun getUserById(id: Int): User {
-        return User(id, "John Doe")
+    fun processUserProfile(profile: UserProfile) {
+        println(profile.name.length)
     }
+}
+
+class UserProfile {
+    var name: String = ""
 }
