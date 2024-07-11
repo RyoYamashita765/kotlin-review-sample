@@ -1,5 +1,6 @@
 public class Main {
     val siteUrl = "https://www.exmaple.com"
+    private val userRepository = UserRepository()
 
     companion object {
         @JvmStatic
@@ -8,5 +9,11 @@ public class Main {
             val circleArea = 3.141592 * circleRadius * circleRadius
             println("Circle area is $circleArea")
         }
+    }
+}
+
+class UserRepository {
+    fun getUserById(id: Int): User {
+        return User(id, "John Doe")
     }
 }
