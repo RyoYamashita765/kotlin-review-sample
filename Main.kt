@@ -1,4 +1,6 @@
 public class Main {
+    val siteUrl = "https://www.exmaple.com"
+
     companion object {
         @JvmStatic
         fun main() {
